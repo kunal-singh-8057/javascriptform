@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<form onsubmit=" return myfun()">
+	<input type="text" name="" id="username" placeholder="enter the username" value=""><span id="m1"></span>
+	<br></br>
+	<input type="password" name="" id="password" placeholder="enter the password" value=""><span id="m2"></span>
+
+	<br></br>
+    <input type="Submit" name="" value="submit">	
+	</form>
+
+	<script type="text/javascript">
+		
+		function myfun()
+		{
+			var un = document.getElementById("username").value;
+			var ps = document.getElementById("password").value;
+
+			if(un=="")
+			{
+				document.getElementById("m1").innerHTML="**plz enter the username";
+				return false;
+			}
+
+			if(ps=="")
+			{
+				document.getElementById("m2").innerHTML="**plz enter the password";
+				return false;
+			}
+
+			else{
+				return true;
+			}
+		}
+	</script>
+</body>
+</html>
